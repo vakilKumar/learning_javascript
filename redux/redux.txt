@@ -1,0 +1,66 @@
+
+. what is redux
+
+Redux is an open-source Javascript Library. It acts like a central store to store the various state of an application. It is used for managing and centralizing the state of an application. 
+
+
+.is the state in Redux mutable or immutable?
+
+Redux supports an immutable state.Redux keeps the state unchanged. This means you can't change the state directly. To update the state, you need to create a new state object with the changes.
+
+.What are actions in Redux?
+Actions are simple JavaScript Objects containing information for the store. They consist of a type field and other data or information fields(payload). The type field specifies which action to perform. The payload(data or information field) describes the action.
+
+. What is the role of a Reducer in Redux?
+Reducers form special functions which take the current state and return the next state. The role of a reducer is to specify how the state of the application should change in response to actions.
+
+
+.What is Store in Redux?
+A Store in Redux can be referred to as the state container, which evidently, holds the application's state. It is an immutable object tree holding the whole state tree of the application. We can create a store object in redux using the createStore() function.
+
+ .Important differences between mapStateToProps() and mapDispatchToProps() ?
+
+mpStateToProps() is used to map the Redux state to component props, while mapDispatchToProps() is used to map Redux actions to component props for dispatching.
+
+What are the core principles of Redux?
+
+There are three core principles of Redux. 
+1. Single Source of Truth - The global state of the application is stored in a single store, in an object tree.  
+2. The State is read-only - We can change the state by emitting an action or object describing what happened. The state itself is considered read-only.  
+3. Changes are made with pure functions - Reducers form special functions which take the current state and return the next state. Reducer functions should be pure and do nothing more than return the next state.
+
+
+.How to structure your top-level directories in Redux?
+
+The top-level directories in Redux are structured in the following way. 
+
+Components
+
+This directory has presentational components. These components render the UI and receive props from their parent components.
+
+Containers
+
+This directory contains the connected components (smart components) connected to the Redux store and provides the data and actions from the store to the presentational components.
+
+Actions
+
+This directory contains the action creators and the action types used to dispatch actions to the store.
+
+Reducers
+
+This directory contains the reducers responsible for updating the store's state in response to actions being dispatched.
+
+Store
+
+This directory contains the store configuration and any middleware used in the application.
+
+
+
+.What is redux-saga?
+Redux Saga is a middleware for Redux. Redux-Saga easily handles side effects such as asynchronous requests or logging in to a React-Redux application. Side effects are operations that impact the state of the application outside of the normal flow of control. It uses a mechanism called generators to manage the flow of control in your side-effect logic. Generators are ideal for handling asynchronous operations that can be paused and resumed multiple times.
+
+.Explain Redux Selectors.
+Redux selectors are functions used to extract data from the Redux store. They take the stored state as an argument. After Extracting the state, the selectors can perform transformations on that data, such as filtering, mapping, or aggregating, before passing it to a component.
+
+
+
